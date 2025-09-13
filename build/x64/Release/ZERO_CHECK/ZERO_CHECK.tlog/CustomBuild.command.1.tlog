@@ -1,0 +1,10 @@
+^D:\CODE\RNG_BENCH\BUILD\CMAKEFILES\0E194DD390EFCA5E3E5114A53772637F\GENERATE.STAMP.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -SD:/code/rng_bench -BD:/code/rng_bench/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/code/rng_bench/build/rng_bench.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

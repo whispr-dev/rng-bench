@@ -10,14 +10,14 @@
 #include <iostream>
 #include <sstream>
 
-#include "platform.h"
-#include "stats.h"
-#include "csv.h"
+#include "rng_platform.h"
+#include "rng_stats.h"
+#include "rng_csv.h"
 
 #include "rng_splitmix64.h"
 #include "rng_pcg32.h"
 #include "rng_xoroshiro128pp.h"
-#include "rng_xoshiro256ss.h"
+// #include "rng_xoshiro256ss.h"
 #include "rng_std_wrappers.h"
 #include "rng_csimd_dynamic.h"
 
@@ -327,7 +327,7 @@ int main(int argc, char** argv) {
       "std_minstd",
       "ranlux48",
       "xoroshiro128pp",
-      "xoshiro256ss",
+//      "xoshiro256ss",
       "pcg32",
       "csimd"
     };
@@ -354,9 +354,9 @@ int main(int argc, char** argv) {
   if (wants("xoroshiro128pp")) {
     results.push_back(run_bench_fixed<xoroshiro128pp>("xoroshiro128pp", cmd));
   }
-  if (wants("xoshiro256ss")) {
-    results.push_back(run_bench_fixed<xoshiro256ss>("xoshiro256ss", cmd));
-  }
+//  if (wants("xoshiro256ss")) {
+//    results.push_back(run_bench_fixed<xoshiro256ss>("xoshiro256ss", cmd));
+//  }
   if (wants("pcg32")) {
     results.push_back(run_bench_fixed<pcg32>("pcg32", cmd));
   }

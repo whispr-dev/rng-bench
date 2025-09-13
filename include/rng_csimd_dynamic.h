@@ -1,5 +1,5 @@
 #pragma once
-#include "platform.h"
+#include "rng_platform.h"
 #include <cstdint>
 #include <string>
 #include <stdexcept>

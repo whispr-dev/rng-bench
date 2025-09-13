@@ -1,0 +1,10 @@
+^D:\CODE\RNG_BENCH\CMAKELISTS.TXT
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -SD:/code/rng_bench -BD:/code/rng_bench/build --check-stamp-file D:/code/rng_bench/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
